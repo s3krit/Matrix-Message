@@ -1,6 +1,6 @@
 name: matrix-message
 description: Send a message to a matrix channel
-author: s3krit
+author: Martin Pugh (pugh@s3kr.it)
 inputs:
   server:
     description: "Matrix server hostname"
@@ -19,5 +19,4 @@ inputs:
     default: ""
 runs:
   using: docker
-  image: 'docker://parity/tools:latest'
-entrypoint: 'entrypoint.sh'
+  image: 'Dockerfile'

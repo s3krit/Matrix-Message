@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # structure_message $content $formatted_content (optional)
 structure_message() {
@@ -12,10 +12,9 @@ structure_message() {
 
 # send_message $body (json formatted) $room_id $access_token
 send_message() {
-curl -XPOST -d "$1" "https://$server/_matrix/client/r0/rooms/$2/send/m.room.message?access_token=$3"
+curl -XPOST -d "$1" "https://$INPUT_SERVER/_matrix/client/r0/rooms/$2/send/m.room.message?access_token=$3"
 }
 
-# Format and send message to #polkadot channel
 msg_body=$(cat <<EOF
 EOF
 )
@@ -25,4 +24,4 @@ formatted_msg_body=$(cat <<EOF
 EOF
 )
 
-send_message "$(structure_message "$message" "$formatted_message")" $room_id $access_token
+send_message "$(structure_message "$INPUT_MESSAGE" "$INPUT_FORMATTED_MESSAGE")" $INPUT_ROOM_ID $INPUT_ACCESS_TOKEN
