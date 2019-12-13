@@ -1,0 +1,23 @@
+name: matrix-message
+description: Send a message to a matrix channel
+author: s3krit
+inputs:
+  server:
+    description: "Matrix server hostname"
+    default: "matrix.org"
+  room_id:
+    description: "Matrix room ID, specified in channels advanced settings"
+    default: ""
+  access_token:
+    description: "Access token required to send to matrix server"
+    default: ""
+  message:
+    description: "Message to send in plaintext format"
+    default: ""
+  formatted_message:
+    description: "Message to send, formatted in Matrix HTML"
+    default: ""
+runs:
+  using: docker
+  image: 'docker://parity/tools:latest'
+entrypoint: 'entrypoint.sh'
