@@ -5,18 +5,23 @@ inputs:
   server:
     description: "Matrix server hostname"
     default: "matrix.org"
+    required: false
   room_id:
     description: "Matrix room ID, specified in channels advanced settings"
     default: ""
+    required: true
   access_token:
     description: "Access token required to send to matrix server"
     default: ""
+    required: true
   message:
     description: "Message to send in plaintext format"
     default: ""
+    required: true
   formatted_message:
     description: "Message to send, formatted in Matrix HTML"
     default: ""
+    required: false
 runs:
   using: docker
   image: 'Dockerfile'
