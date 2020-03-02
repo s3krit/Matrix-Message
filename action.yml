@@ -18,10 +18,6 @@ inputs:
     description: "Message to send in plaintext format"
     default: ""
     required: true
-  formatted_message:
-    description: "Message to send, formatted in Matrix HTML"
-    default: ""
-    required: false
 runs:
   using: docker
   image: 'Dockerfile'

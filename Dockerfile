@@ -1,4 +1,5 @@
 FROM parity/tools:latest
+RUN apk add markdown
 COPY entrypoint.sh /
-CMD chmod +x /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT /entrypoint.sh
