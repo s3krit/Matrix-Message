@@ -18,5 +18,5 @@ send_message() {
     exit 1
   fi
 }
-
+echo "$INPUT_MESSAGE"
 send_message "$(structure_message "$INPUT_MESSAGE")" "$INPUT_ROOM_ID" "$INPUT_ACCESS_TOKEN"
