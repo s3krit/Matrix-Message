@@ -23,7 +23,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: send message
-       uses: s3krit/matrix-message-action@v0.0.1
+       uses: s3krit/matrix-message-action@v0.0.3
        with:
          room_id: ${{ secrets.MATRIX_ROOM_ID }}
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
